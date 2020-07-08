@@ -118,6 +118,7 @@
                   last: lastInRange(day) && !!value.end && range
                 }"
                 :disabled="isDisabled(day) || isWeekEndDay(day)"
+                :aria-label="day.format('DD MMMM YYYY')"
                 role="cell"
                 tabindex="-1"
                 type="button"
@@ -139,7 +140,6 @@
                 />
                 <span
                   class="datepicker-day-text flex-1"
-                  :aria-label="day.format('DD MMMM YYYY')"
                 >
                   {{ day.format('D') }}
                 </span>
@@ -239,8 +239,8 @@
       weekDays () {
         return getWeekDays(this.locale, this.firstDayOfWeek)
       },
-      rowsCount() {
-        return (this.weekStart + this.monthDays.length  + this.endEmptyDays)/7
+      rowsCount () {
+        return (this.weekStart + this.monthDays.length + this.endEmptyDays) / 7
       }
     },
     methods: {
@@ -334,25 +334,25 @@
         this.selectingYearMonth = null
         this.$emit('change-year-month', event)
       },
-      getNumberIfRowIsFirst(number, row) {
+      getNumberIfRowIsFirst (number, row) {
         return row == 1
           ? number
           : 0
       },
-      getNumberIfRowIsLast(number, row) {
+      getNumberIfRowIsLast (number, row) {
         console.log(row, this.rowsCount, number)
         return row == this.rowsCount
           ? number
           : 0
       },
-      getMothDaysForRow(row) {
+      getMothDaysForRow (row) {
         const rowIndex = row - 1
         const startOffset = this.getNumberIfRowIsFirst(this.weekStart, row)
-        const start = Math.max(rowIndex*7 - this.weekStart, 0)
+        const start = Math.max(rowIndex * 7 - this.weekStart, 0)
         const end = start + 7 - startOffset
 
         return this.monthDays.slice(start, end)
-      },
+      }
     }
   }
 </script>
