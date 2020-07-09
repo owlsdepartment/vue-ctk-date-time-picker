@@ -24,6 +24,7 @@
           <button
             type="button"
             class="datepicker-button datepicker-prev text-center h-100 flex align-center"
+            :aria-label="`Previous month (${getMonthName('prev')})`"
             @click="changeMonth('prev')"
           >
             <svg viewBox="0 0   1000 1000">
@@ -72,6 +73,7 @@
             type="button"
             tabindex="-1"
             class="datepicker-button datepicker-next text-center h-100 flex align-center justify-content-right"
+            :aria-label="`Next month (${getMonthName('next')})`"
             @click="changeMonth('next')"
           >
             <svg viewBox="0 0 1000 1000">
@@ -324,6 +326,16 @@
         this.transitionDaysName = `slide${val}`
         this.transitionLabelName = `slidev${val}`
         this.$emit('change-month', val)
+      },
+      getMonthName (type) {
+        const types = {
+          prev: -1,
+          next: 1
+        }
+
+        return moment()
+          .add(types[type], 'month')
+          .format('MMMM')
       },
       selectYearMonth (event) {
         const { month, year } = event
