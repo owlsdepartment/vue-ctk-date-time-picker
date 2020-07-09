@@ -7,6 +7,7 @@
       <CustomButton
         :color="dark ? '#757575' : '#424242'"
         :dark="dark"
+        tabindex="0"
         with-border
         @click="$emit('back')"
       >
@@ -23,6 +24,7 @@
         :selected="currentMonth === index"
         :dark="dark"
         class="month-button"
+        tabindex="0"
         with-border
         @click="selectMonth(index)"
       >
@@ -34,6 +36,7 @@
         :color="color"
         :dark="dark"
         :selected="currentYear === year"
+        tabindex="0"
         with-border
         @click="selectYear(year)"
       >
