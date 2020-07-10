@@ -42,12 +42,14 @@
             <CustomButton
               v-for="m in [month]"
               :key="m.month"
+              ref="monthButton"
               class="date-buttons lm-fs-16 padding-button flex-1"
               aria-label="Select month"
               tabindex="0"
               :color="color"
               :dark="dark"
               @click="selectingYearMonth = 'month'"
+              @keydown.stop="() => {}"
             >
               {{ monthFormatted }}
             </CustomButton>
@@ -59,12 +61,14 @@
             <CustomButton
               v-for="y in [year]"
               :key="y"
+              ref="yearButton"
               class="date-buttons lm-fs-16 padding-button flex-1"
               aria-label="Select year"
               tabindex="0"
               :color="color"
               :dark="dark"
               @click="selectingYearMonth = 'year'"
+              @keydown.stop="() => {}"
             >
               {{ year }}
             </CustomButton>
@@ -247,6 +251,15 @@
         return (this.weekStart + this.monthDays.length + this.endEmptyDays) / 7
       }
     },
+    watch: {
+      selectingYearMonth: {
+        handler (curr, prev) {
+          if (!curr) {
+            this.$refs[`${prev}Button`][0].$el.focus()
+          }
+        }
+      }
+    },
     methods: {
       isKeyboardSelected (day) {
         return day && this.newValue ? day.format('YYYY-MM-DD') === this.newValue.format('YYYY-MM-DD') : null
@@ -349,13 +362,12 @@
         this.$emit('change-year-month', event)
       },
       getNumberIfRowIsFirst (number, row) {
-        return row == 1
+        return row === 1
           ? number
           : 0
       },
       getNumberIfRowIsLast (number, row) {
-        console.log(row, this.rowsCount, number)
-        return row == this.rowsCount
+        return row === this.rowsCount
           ? number
           : 0
       },
