@@ -28,7 +28,6 @@
         tabindex="0"
         with-border
         @click="selectMonth(index)"
-        @keydown.stop="() => {}"
       >
         {{ m }}
       </CustomButton>
@@ -42,7 +41,6 @@
         tabindex="0"
         with-border
         @click="selectYear(year)"
-        @keydown.stop="() => {}"
       >
         {{ year }}
       </CustomButton>

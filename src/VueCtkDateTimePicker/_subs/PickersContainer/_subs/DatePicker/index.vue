@@ -49,7 +49,6 @@
               :color="color"
               :dark="dark"
               @click="selectingYearMonth = 'month'"
-              @keydown.stop="() => {}"
             >
               {{ monthFormatted }}
             </CustomButton>
@@ -68,7 +67,6 @@
               :color="color"
               :dark="dark"
               @click="selectingYearMonth = 'year'"
-              @keydown.stop="() => {}"
             >
               {{ year }}
             </CustomButton>
@@ -128,7 +126,7 @@
                 :disabled="isDisabled(day) || isWeekEndDay(day)"
                 :aria-label="day.format('DD MMMM YYYY')"
                 role="cell"
-                tabindex="-1"
+                tabindex="0"
                 type="button"
                 class="datepicker-day flex align-center justify-content-center"
                 @click="selectDate(day)"
