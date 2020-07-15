@@ -95,7 +95,6 @@
       } else {
         this.getYears()
         this.$nextTick(() => {
-          console.log(this.$refs.yearButton)
           this.$refs.yearButton[0].$el.focus()
         })
       }
