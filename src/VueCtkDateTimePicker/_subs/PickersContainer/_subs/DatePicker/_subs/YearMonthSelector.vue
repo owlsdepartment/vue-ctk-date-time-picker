@@ -7,6 +7,7 @@
       <CustomButton
         :color="dark ? '#757575' : '#424242'"
         :dark="dark"
+        tabindex="0"
         with-border
         @click="$emit('back')"
       >
@@ -19,10 +20,12 @@
       <CustomButton
         v-for="(m, index) in months"
         :key="index"
+        ref="monthButton"
         :color="color"
         :selected="currentMonth === index"
         :dark="dark"
         class="month-button"
+        tabindex="0"
         with-border
         @click="selectMonth(index)"
       >
@@ -31,9 +34,11 @@
       <CustomButton
         v-for="year in years"
         :key="year"
+        ref="yearButton"
         :color="color"
         :dark="dark"
         :selected="currentYear === year"
+        tabindex="0"
         with-border
         @click="selectYear(year)"
       >
@@ -86,8 +91,12 @@
     mounted () {
       if (this.isMonthMode) {
         this.getMonths()
+        this.$nextTick(() => this.$refs.monthButton[0].$el.focus())
       } else {
         this.getYears()
+        this.$nextTick(() => {
+          this.$refs.yearButton[0].$el.focus()
+        })
       }
     },
     methods: {
