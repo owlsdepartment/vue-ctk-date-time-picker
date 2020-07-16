@@ -1,12 +1,16 @@
 <template>
   <div
-    :class="{'is-dark': dark}"
+    role="row"
     class="week-days flex"
+    :class="{'is-dark': dark}"
   >
     <div
       v-for="(weekDay, index) in weekDays"
       :key="index"
       class="flex-1 text-muted lm-fs-12 flex justify-content-center align-center week-days-container"
+      aria-sort="none"
+      role="columnheader"
+      :aria-label="getFullWeekdayName(weekDay)"
     >
       {{ weekDay }}
     </div>
@@ -14,11 +18,18 @@
 </template>
 
 <script>
+  import moment from 'moment'
+
   export default {
     name: 'WeekDays',
     props: {
       weekDays: { type: Array, default: () => ([]), required: true },
       dark: { type: Boolean, default: null }
+    },
+    methods: {
+      getFullWeekdayName (day) {
+        return moment(day, 'dd').format('dddd')
+      }
     }
   }
 </script>
