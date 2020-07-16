@@ -371,7 +371,7 @@
       },
       getMonthDaysForRow (row) {
         const rowIndex = row - 1
-        const startOffset = getNumberIf(weekStart, row, 'first')
+        const startOffset = this.getNumberIf(weekStart, row, 'first')
         const start = Math.max(rowIndex * 7 - this.weekStart, 0)
         const end = start + 7 - startOffset
 
