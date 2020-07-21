@@ -12,7 +12,9 @@
       role="columnheader"
       :aria-label="getFullWeekdayName(weekDay)"
     >
-      {{ weekDay }}
+      <span aria-hidden="true">
+        {{ weekDay }}
+      </span>
     </div>
   </div>
 </template>

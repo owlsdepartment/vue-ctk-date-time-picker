@@ -146,6 +146,7 @@
                 />
                 <span
                   class="datepicker-day-text flex-1"
+                  aria-hidden="true"
                 >
                   {{ day.format('D') }}
                 </span>
