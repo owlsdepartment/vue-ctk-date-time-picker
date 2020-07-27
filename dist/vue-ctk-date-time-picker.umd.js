@@ -6409,17 +6409,6 @@ $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
 
 /***/ }),
 
-/***/ "3ee6":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonValidate_vue_vue_type_style_index_0_id_601c6e79_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("e333");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonValidate_vue_vue_type_style_index_0_id_601c6e79_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonValidate_vue_vue_type_style_index_0_id_601c6e79_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonValidate_vue_vue_type_style_index_0_id_601c6e79_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
 /***/ "40c3":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15115,6 +15104,17 @@ module.exports = function isInteger(it) {
   return !isObject(it) && isFinite(it) && floor(it) === it;
 };
 
+
+/***/ }),
+
+/***/ "9c2b":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonValidate_vue_vue_type_style_index_0_id_8f4fae8e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("e9ea");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonValidate_vue_vue_type_style_index_0_id_8f4fae8e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonValidate_vue_vue_type_style_index_0_id_8f4fae8e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ButtonValidate_vue_vue_type_style_index_0_id_8f4fae8e_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -24895,13 +24895,6 @@ module.exports = (
 
 /***/ }),
 
-/***/ "e333":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
 /***/ "e4ae":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25089,6 +25082,13 @@ module.exports = function (original) {
   } return C === undefined ? Array : C;
 };
 
+
+/***/ }),
+
+/***/ "e9ea":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -28722,16 +28722,14 @@ var HeaderPicker_component = normalizeComponent(
 )
 
 /* harmony default export */ var HeaderPicker = (HeaderPicker_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"e3b29fea-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VueCtkDateTimePicker/_subs/PickersContainer/_subs/ButtonValidate.vue?vue&type=template&id=601c6e79&scoped=true&
-var ButtonValidatevue_type_template_id_601c6e79_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"datepicker-buttons-container flex justify-content-right",class:[{'is-dark': _vm.dark}]},[(_vm.hasButtonNow)?_c('button',{staticClass:"datepicker-button now flex align-center justify-content-center",class:{'right-margin': _vm.hasButtonValidate},attrs:{"tabindex":"-1","type":"button"},on:{"click":function($event){return _vm.emitNow()}}},[_c('span',{staticClass:"datepicker-button-effect",style:([_vm.bgStyle])}),_c('span',{staticClass:"datepicker-button-content",style:([_vm.colorStyle])},[_vm._v("\n      "+_vm._s(_vm.buttonNowTranslation || 'Now')+"\n    ")])]):_vm._e(),(_vm.hasButtonValidate)?_c('button',{staticClass:"datepicker-button validate flex align-center justify-content-center",attrs:{"type":"button","tabindex":"-1"},on:{"click":function($event){$event.stopPropagation();return _vm.$emit('validate')}}},[_c('span',{staticClass:"datepicker-button-effect",style:([_vm.bgStyle])}),_c('svg',{style:([_vm.colorStyle]),attrs:{"xmlns":"http://www.w3.org/2000/svg","width":"24","height":"24","viewBox":"0 0 24 24"}},[_c('path',{attrs:{"d":"M0 0h24v24H0z","fill":"none"}}),_c('path',{attrs:{"d":"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"}})])]):_vm._e()])}
-var ButtonValidatevue_type_template_id_601c6e79_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"e3b29fea-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VueCtkDateTimePicker/_subs/PickersContainer/_subs/ButtonValidate.vue?vue&type=template&id=8f4fae8e&scoped=true&
+var ButtonValidatevue_type_template_id_8f4fae8e_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"datepicker-buttons-container flex justify-content-right",class:[{'is-dark': _vm.dark}]},[(_vm.hasButtonNow)?_c('button',{staticClass:"datepicker-button now flex align-center justify-content-center",class:{'right-margin': _vm.hasButtonValidate},attrs:{"type":"button"},on:{"click":function($event){return _vm.emitNow()}}},[_c('span',{staticClass:"datepicker-button-effect",style:([_vm.bgStyle])}),_c('span',{staticClass:"datepicker-button-content",style:([_vm.colorStyle])},[_vm._v("\n      "+_vm._s(_vm.buttonNowTranslation || 'Now')+"\n    ")])]):_vm._e(),(_vm.hasButtonValidate)?_c('button',{staticClass:"datepicker-button validate flex align-center justify-content-center",attrs:{"type":"button"},on:{"click":function($event){$event.stopPropagation();return _vm.$emit('validate')}}},[_c('span',{staticClass:"datepicker-button-effect",style:([_vm.bgStyle])}),_c('svg',{style:([_vm.colorStyle]),attrs:{"xmlns":"http://www.w3.org/2000/svg","width":"24","height":"24","viewBox":"0 0 24 24"}},[_c('path',{attrs:{"d":"M0 0h24v24H0z","fill":"none"}}),_c('path',{attrs:{"d":"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"}})])]):_vm._e()])}
+var ButtonValidatevue_type_template_id_8f4fae8e_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/VueCtkDateTimePicker/_subs/PickersContainer/_subs/ButtonValidate.vue?vue&type=template&id=601c6e79&scoped=true&
+// CONCATENATED MODULE: ./src/VueCtkDateTimePicker/_subs/PickersContainer/_subs/ButtonValidate.vue?vue&type=template&id=8f4fae8e&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/VueCtkDateTimePicker/_subs/PickersContainer/_subs/ButtonValidate.vue?vue&type=script&lang=js&
-//
-//
 //
 //
 //
@@ -28842,8 +28840,8 @@ var ButtonValidatevue_type_template_id_601c6e79_scoped_true_staticRenderFns = []
 });
 // CONCATENATED MODULE: ./src/VueCtkDateTimePicker/_subs/PickersContainer/_subs/ButtonValidate.vue?vue&type=script&lang=js&
  /* harmony default export */ var _subs_ButtonValidatevue_type_script_lang_js_ = (ButtonValidatevue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/VueCtkDateTimePicker/_subs/PickersContainer/_subs/ButtonValidate.vue?vue&type=style&index=0&id=601c6e79&lang=scss&scoped=true&
-var ButtonValidatevue_type_style_index_0_id_601c6e79_lang_scss_scoped_true_ = __webpack_require__("3ee6");
+// EXTERNAL MODULE: ./src/VueCtkDateTimePicker/_subs/PickersContainer/_subs/ButtonValidate.vue?vue&type=style&index=0&id=8f4fae8e&lang=scss&scoped=true&
+var ButtonValidatevue_type_style_index_0_id_8f4fae8e_lang_scss_scoped_true_ = __webpack_require__("9c2b");
 
 // CONCATENATED MODULE: ./src/VueCtkDateTimePicker/_subs/PickersContainer/_subs/ButtonValidate.vue
 
@@ -28856,11 +28854,11 @@ var ButtonValidatevue_type_style_index_0_id_601c6e79_lang_scss_scoped_true_ = __
 
 var ButtonValidate_component = normalizeComponent(
   _subs_ButtonValidatevue_type_script_lang_js_,
-  ButtonValidatevue_type_template_id_601c6e79_scoped_true_render,
-  ButtonValidatevue_type_template_id_601c6e79_scoped_true_staticRenderFns,
+  ButtonValidatevue_type_template_id_8f4fae8e_scoped_true_render,
+  ButtonValidatevue_type_template_id_8f4fae8e_scoped_true_staticRenderFns,
   false,
   null,
-  "601c6e79",
+  "8f4fae8e",
   null
   
 )

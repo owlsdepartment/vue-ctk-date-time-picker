@@ -7,7 +7,6 @@
       v-if="hasButtonNow"
       class="datepicker-button now flex align-center justify-content-center"
       :class="{'right-margin': hasButtonValidate}"
-      tabindex="-1"
       type="button"
       @click="emitNow()"
     >
@@ -25,7 +24,6 @@
     <button
       v-if="hasButtonValidate"
       type="button"
-      tabindex="-1"
       class="datepicker-button validate flex align-center justify-content-center"
       @click.stop="$emit('validate')"
     >
