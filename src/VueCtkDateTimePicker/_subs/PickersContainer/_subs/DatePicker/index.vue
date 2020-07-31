@@ -17,7 +17,6 @@
     <div
       class="calendar lm-w-100"
       aria-label="Date picker"
-      role="table"
     >
       <div class="datepicker-controls flex align-center justify-content-center">
         <div class="arrow-month h-100">
@@ -86,80 +85,83 @@
           </button>
         </div>
       </div>
-      <WeekDays
-        :week-days="weekDays"
-        :dark="dark"
-      />
-      <div
-        :style="{height: (monthDays.length + weekStart) > 35 ? '250px' : '210px'}"
-        role="rowgroup"
-        class="month-container"
-      >
-        <TransitionGroup :name="transitionDaysName">
-          <div
-            v-for="m in [month]"
-            :key="m.month"
-          >
+      <div role="table">
+        <WeekDays
+          :week-days="weekDays"
+          :dark="dark"
+        />
+        <div
+          :style="{height: (monthDays.length + weekStart) > 35 ? '250px' : '210px'}"
+          role="rowgroup"
+          class="month-container"
+        >
+          <TransitionGroup :name="transitionDaysName">
             <div
-              v-for="row in rowsCount"
-              :key="row + 'row'"
-              role="row"
-              class="datepicker-days flex"
+              v-for="m in [month]"
+              :key="m.month"
             >
               <div
-                v-for="start in getNumberIf(weekStart, row, 'first')"
-                :key="start + 'startEmptyDay'"
-                role="cell"
-                class="datepicker-day align-center justify-content-center"
-              />
-              <button
-                v-for="day in getMonthDaysForRow(row)"
-                :key="day.format('D')"
-                :class="{
-                  selected: isSelected(day) && !isDisabled(day),
-                  disabled: (isDisabled(day) || isWeekEndDay(day)),
-                  enable: !(isDisabled(day) || isWeekEndDay(day)),
-                  between: isBetween(day) && range,
-                  first: firstInRange(day) && range,
-                  last: lastInRange(day) && !!value.end && range
-                }"
-                :disabled="isDisabled(day) || isWeekEndDay(day)"
-                :aria-label="day.format('DD MMMM YYYY')"
-                role="cell"
-                tabindex="0"
-                type="button"
-                class="datepicker-day flex align-center justify-content-center"
-                @click="selectDate(day)"
+                v-for="row in rowsCount"
+                :key="row + 'row'"
+                role="row"
+                class="datepicker-days flex"
               >
-                <span
-                  v-if="isToday(day)"
-                  class="datepicker-today"
-                />
-                <span
-                  v-show="!isDisabled(day) || isSelected(day)"
-                  :style="bgStyle"
-                  class="datepicker-day-effect"
-                />
-                <span
-                  v-if="isKeyboardSelected(day)"
-                  class="datepicker-day-keyboard-selected"
-                />
-                <span
-                  class="datepicker-day-text flex-1"
+                <div
+                  v-for="start in getNumberIf(weekStart, row, 'first')"
+                  :key="start + 'startEmptyDay'"
                   aria-hidden="true"
+                  role="cell"
+                  class="datepicker-day align-center justify-content-center"
+                />
+                <button
+                  v-for="day in getMonthDaysForRow(row)"
+                  :key="day.format('D')"
+                  :class="{
+                    selected: isSelected(day) && !isDisabled(day),
+                    disabled: (isDisabled(day) || isWeekEndDay(day)),
+                    enable: !(isDisabled(day) || isWeekEndDay(day)),
+                    between: isBetween(day) && range,
+                    first: firstInRange(day) && range,
+                    last: lastInRange(day) && !!value.end && range
+                  }"
+                  :disabled="isDisabled(day) || isWeekEndDay(day)"
+                  role="cell"
+                  tabindex="0"
+                  type="button"
+                  class="datepicker-day flex align-center justify-content-center"
+                  @click="selectDate(day)"
                 >
-                  {{ day.format('D') }}
-                </span>
-              </button>
-              <div
-                v-for="end in getNumberIf(endEmptyDays, row, 'last')"
-                :key="end + 'endEmptyDay'"
-                role="cell"
-                class="datepicker-day flex align-center justify-content-center"
-              />
+                  <span
+                    v-if="isToday(day)"
+                    class="datepicker-today"
+                  />
+                  <span
+                    v-show="!isDisabled(day) || isSelected(day)"
+                    :style="bgStyle"
+                    class="datepicker-day-effect"
+                  />
+                  <span
+                    v-if="isKeyboardSelected(day)"
+                    class="datepicker-day-keyboard-selected"
+                  />
+                  <span
+                    class="datepicker-day-text flex-1"
+                    aria-hidden="true"
+                    :aria-label="day.format('DD MMMM YYYY')"
+                  >
+                    {{ day.format('D') }}
+                  </span>
+                </button>
+                <div
+                  v-for="end in getNumberIf(endEmptyDays, row, 'last')"
+                  :key="end + 'endEmptyDay'"
+                  role="cell"
+                  class="datepicker-day flex align-center justify-content-center"
+                />
+              </div>
             </div>
-          </div>
-        </TransitionGroup>
+          </TransitionGroup>
+        </div>
       </div>
       <YearMonthSelector
         v-if="selectingYearMonth"
