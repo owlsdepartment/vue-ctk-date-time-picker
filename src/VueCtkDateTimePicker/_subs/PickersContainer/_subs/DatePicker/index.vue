@@ -350,6 +350,7 @@
         }
 
         return moment()
+          .month(this.month.month)
           .add(types[type], 'month')
           .format('MMMM')
       },
