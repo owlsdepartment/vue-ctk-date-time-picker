@@ -151,9 +151,13 @@
                   <span
                     class="datepicker-day-text flex-1"
                     aria-hidden="true"
-                    :aria-label="day.format('DD MMMM YYYY')"
                   >
                     {{ day.format('D') }}
+                  </span>
+                  <span
+                    class="datepicker-day-text-hidden"
+                  >
+                    {{ day.format('DD MMMM YYYY') }}
                   </span>
                 </button>
                 <div
@@ -465,6 +469,7 @@
           cursor: pointer;
         }
 
+
         &-effect, .datepicker-today{
           position: absolute;
           top: 0;
@@ -492,6 +497,15 @@
         .datepicker-day-text {
           position: relative;
           color: #000;
+          &-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            white-space: nowrap;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+          }
         }
         .datepicker-day-keyboard-selected {
           position: absolute;
