@@ -23,6 +23,8 @@
           <button
             type="button"
             class="datepicker-button datepicker-prev text-center h-100 flex align-center"
+            aria-live="polite"
+            aria-atomic="true"
             :aria-label="`Previous month (${getMonthName('prev')})`"
             @click="changeMonth('prev')"
           >
@@ -76,6 +78,8 @@
             type="button"
             tabindex="-1"
             class="datepicker-button datepicker-next text-center h-100 flex align-center justify-content-right"
+            aria-live="polite"
+            aria-atomic="true"
             :aria-label="`Next month (${getMonthName('next')})`"
             @click="changeMonth('next')"
           >
