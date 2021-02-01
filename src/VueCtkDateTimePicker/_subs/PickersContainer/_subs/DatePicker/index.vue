@@ -83,7 +83,10 @@
         :style="{height: (monthDays.length + weekStart) > 35 ? '250px' : '210px'}"
         class="month-container"
       >
-        <TransitionGroup :name="transitionDaysName">
+        <TransitionGroup
+          tag="div"
+          :name="transitionDaysName"
+        >
           <div
             v-for="m in [month]"
             :key="m.month"
