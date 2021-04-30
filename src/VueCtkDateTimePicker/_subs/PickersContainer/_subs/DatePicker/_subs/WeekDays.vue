@@ -2,6 +2,7 @@
   <div
     :class="{'is-dark': dark}"
     class="week-days flex"
+    aria-hidden="true"
   >
     <div
       v-for="(weekDay, index) in weekDays"

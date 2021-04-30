@@ -109,6 +109,7 @@
                 last: lastInRange(day) && !!value.end && range
               }"
               :disabled="isDisabled(day) || isWeekEndDay(day)"
+              :aria-label="dateLabel(day)"
               type="button"
               tabindex="-1"
               class="datepicker-day flex align-center justify-content-center"
@@ -315,6 +316,9 @@
         this.transitionLabelName = isBefore ? `slidevprev` : `slidevnext`
         this.selectingYearMonth = null
         this.$emit('change-year-month', event)
+      },
+      dateLabel (day) {
+        return day.format('dddd Do MMMM YYYY')
       }
     }
   }
